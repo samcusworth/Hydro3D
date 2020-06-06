@@ -419,7 +419,7 @@
 !======================================================================
               end if
 
-              tag=(2*sync_dir-1)*10**5+cpu_prev
+              tag=(2*sync_dir-1)*10**4+cpu_prev
               ta=2*sync_dir
               call MPI_IRECV  (dom(ib)%recvb_m1(1),trecv,MPI_FLT,
      &dom_ad(cpu_prev),dom(ib)%tg(ta),MPI_COMM_WORLD,dom(ib)%rq_m1,ierr)
@@ -477,7 +477,7 @@
      & 3.0d0*fi(ll-nj-nij)+ 1.0d0*fi(ll-nj-1-nij))/64.0d0
               end if
               end if
-              tag=7*10**5+dom(ib)%corprev1
+              tag=7*10**4+dom(ib)%corprev1
               call MPI_IRECV  (dom(ib)%rc1m,1,MPI_FLT,
      &dom_ad(dom(ib)%corprev1),dom(ib)%tg(8),
      &MPI_COMM_WORLD,dom(ib)%rq_c1m,ierr)
@@ -527,7 +527,7 @@
      & 3.0d0*fi(ll-nj-nij)+ 1.0d0*fi(ll-nj+1-nij))/64.0d0
               end if
               end if
-              tag=9*10**5+dom(ib)%corprev2
+              tag=9*10**4+dom(ib)%corprev2
               call MPI_IRECV  (dom(ib)%rc2m,1,MPI_FLT,
      &dom_ad(dom(ib)%corprev2),dom(ib)%tg(10),
      &MPI_COMM_WORLD,dom(ib)%rq_c2m,ierr)
@@ -577,7 +577,7 @@
      & 3.0d0*fi(ll+nj-nij)+ 1.0d0*fi(ll+nj+1-nij))/64.0d0
               end if
               end if
-              tag=11*10**5+dom(ib)%corprev3
+              tag=11*10**4+dom(ib)%corprev3
               call MPI_IRECV  (dom(ib)%rc3m,1,MPI_FLT,
      &dom_ad(dom(ib)%corprev3),dom(ib)%tg(12),
      &MPI_COMM_WORLD,dom(ib)%rq_c3m,ierr)
@@ -627,7 +627,7 @@
      & 3.0d0*fi(ll+nj-nij)+ 1.0d0*fi(ll+nj-1-nij))/64.0d0
               end if
               end if
-              tag=13*10**5+dom(ib)%corprev4
+              tag=13*10**4+dom(ib)%corprev4
               call MPI_IRECV  (dom(ib)%rc4m,1,MPI_FLT,
      &dom_ad(dom(ib)%corprev4),dom(ib)%tg(14),
      &MPI_COMM_WORLD,dom(ib)%rq_c4m,ierr)
@@ -709,7 +709,7 @@
                  end do
               end if
               end if
-              tag=15*10**5+dom(ib)%edgprev1
+              tag=15*10**4+dom(ib)%edgprev1
               call MPI_IRECV  (dom(ib)%re1m(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgprev1),dom(ib)%tg(16),
      &MPI_COMM_WORLD,dom(ib)%rq_e1m,ierr)
@@ -785,7 +785,7 @@
                  end do
               end if
               end if
-              tag=17*10**5+dom(ib)%edgprev2
+              tag=17*10**4+dom(ib)%edgprev2
               call MPI_IRECV  (dom(ib)%re2m(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgprev2),dom(ib)%tg(18),
      &MPI_COMM_WORLD,dom(ib)%rq_e2m,ierr)
@@ -861,7 +861,7 @@
                  end do
               end if
               end if
-              tag=19*10**5+dom(ib)%edgprev3
+              tag=19*10**4+dom(ib)%edgprev3
               call MPI_IRECV  (dom(ib)%re3m(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgprev3),dom(ib)%tg(20),
      &MPI_COMM_WORLD,dom(ib)%rq_e3m,ierr)
@@ -937,7 +937,7 @@
                  end do
               end if
               end if
-              tag=21*10**5+dom(ib)%edgprev4
+              tag=21*10**4+dom(ib)%edgprev4
               call MPI_IRECV  (dom(ib)%re4m(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgprev4),dom(ib)%tg(22),
      &MPI_COMM_WORLD,dom(ib)%rq_e4m,ierr)
@@ -1013,7 +1013,7 @@
                  end do
               end if
               end if
-              tag=23*10**5+dom(ib)%edgprev5
+              tag=23*10**4+dom(ib)%edgprev5
               call MPI_IRECV  (dom(ib)%re5m(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgprev5),dom(ib)%tg(24),
      &MPI_COMM_WORLD,dom(ib)%rq_e5m,ierr)
@@ -1089,7 +1089,7 @@
                  end do
               end if
               end if
-              tag=25*10**5+dom(ib)%edgprev6
+              tag=25*10**4+dom(ib)%edgprev6
               call MPI_IRECV  (dom(ib)%re6m(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgprev6),dom(ib)%tg(26),
      &MPI_COMM_WORLD,dom(ib)%rq_e6m,ierr)
@@ -1378,7 +1378,7 @@
 !======================================================================
 !======================================================================
               end if
-              tag=(2*sync_dir)*10**5+cpu_next
+              tag=(2*sync_dir)*10**4+cpu_next
               ta=2*sync_dir-1
               call MPI_IRECV  (dom(ib)%recvb_p1(1),trecv,MPI_FLT,
      &dom_ad(cpu_next),dom(ib)%tg(ta),MPI_COMM_WORLD,dom(ib)%rq_p1,ierr)
@@ -1436,7 +1436,7 @@
      & 3.0d0*fi(ll+nj+nij)+ 1.0d0*fi(ll+nj+1+nij))/64.0d0
               end if
               end if
-              tag=8*10**5+dom(ib)%cornext1
+              tag=8*10**4+dom(ib)%cornext1
               call MPI_IRECV  (dom(ib)%rc1p,1,MPI_FLT,
      &dom_ad(dom(ib)%cornext1),dom(ib)%tg(7),
      &MPI_COMM_WORLD,dom(ib)%rq_c1p,ierr)
@@ -1486,7 +1486,7 @@
      & 3.0d0*fi(ll+nj+nij)+ 1.0d0*fi(ll+nj-1+nij))/64.0d0
               end if
               end if
-              tag=10*10**5+dom(ib)%cornext2
+              tag=10*10**4+dom(ib)%cornext2
               call MPI_IRECV  (dom(ib)%rc2p,1,MPI_FLT,
      &dom_ad(dom(ib)%cornext2),dom(ib)%tg(9),
      &MPI_COMM_WORLD,dom(ib)%rq_c2p,ierr)
@@ -1536,7 +1536,7 @@
      & 3.0d0*fi(ll-nj+nij)+ 1.0d0*fi(ll-nj-1+nij))/64.0d0
               end if
               end if
-              tag=12*10**5+dom(ib)%cornext3
+              tag=12*10**4+dom(ib)%cornext3
               call MPI_IRECV  (dom(ib)%rc3p,1,MPI_FLT,
      &dom_ad(dom(ib)%cornext3),dom(ib)%tg(11),
      &MPI_COMM_WORLD,dom(ib)%rq_c3p,ierr)
@@ -1586,7 +1586,7 @@
      & 3.0d0*fi(ll-nj+nij)+ 1.0d0*fi(ll-nj+1+nij))/64.0d0
               end if
               end if
-              tag=14*10**5+dom(ib)%cornext4
+              tag=14*10**4+dom(ib)%cornext4
               call MPI_IRECV  (dom(ib)%rc4p,1,MPI_FLT,
      &dom_ad(dom(ib)%cornext4),dom(ib)%tg(13),
      &MPI_COMM_WORLD,dom(ib)%rq_c4p,ierr)
@@ -1667,7 +1667,7 @@
                  end do
               end if
               end if
-              tag=16*10**5+dom(ib)%edgnext1
+              tag=16*10**4+dom(ib)%edgnext1
               call MPI_IRECV  (dom(ib)%re1p(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgnext1),dom(ib)%tg(15),
      &MPI_COMM_WORLD,dom(ib)%rq_e1p,ierr)
@@ -1743,7 +1743,7 @@
                  end do
               end if
               end if
-              tag=18*10**5+dom(ib)%edgnext2
+              tag=18*10**4+dom(ib)%edgnext2
               call MPI_IRECV  (dom(ib)%re2p(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgnext2),dom(ib)%tg(17),
      &MPI_COMM_WORLD,dom(ib)%rq_e2p,ierr)
@@ -1819,7 +1819,7 @@
                  end do
               end if
               end if
-              tag=20*10**5+dom(ib)%edgnext3
+              tag=20*10**4+dom(ib)%edgnext3
               call MPI_IRECV  (dom(ib)%re3p(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgnext3),dom(ib)%tg(19),
      &MPI_COMM_WORLD,dom(ib)%rq_e3p,ierr)
@@ -1895,7 +1895,7 @@
                  end do
               end if
               end if
-              tag=22*10**5+dom(ib)%edgnext4
+              tag=22*10**4+dom(ib)%edgnext4
               call MPI_IRECV  (dom(ib)%re4p(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgnext4),dom(ib)%tg(21),
      &MPI_COMM_WORLD,dom(ib)%rq_e4p,ierr)
@@ -1971,7 +1971,7 @@
                  end do
               end if
               end if
-              tag=24*10**5+dom(ib)%edgnext5
+              tag=24*10**4+dom(ib)%edgnext5
               call MPI_IRECV  (dom(ib)%re5p(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgnext5),dom(ib)%tg(23),
      &MPI_COMM_WORLD,dom(ib)%rq_e5p,ierr)
@@ -2047,7 +2047,7 @@
                  end do
               end if
               end if
-              tag=26*10**5+dom(ib)%edgnext6
+              tag=26*10**4+dom(ib)%edgnext6
               call MPI_IRECV  (dom(ib)%re6p(1),trecv,MPI_FLT,
      &dom_ad(dom(ib)%edgnext6),dom(ib)%tg(25),
      &MPI_COMM_WORLD,dom(ib)%rq_e6p,ierr)

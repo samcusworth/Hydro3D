@@ -181,7 +181,7 @@
            ttk=dom(ib)%ttc_k
 
            do i=1,26
-              dom(ib)%tg(i)=i*10**5+dom_id(ib)
+              dom(ib)%tg(i)=i*10**4+dom_id(ib)
            end do
 
            allocate(dom(ib)%x(tti),dom(ib)%y(ttj),dom(ib)%z(ttk))
